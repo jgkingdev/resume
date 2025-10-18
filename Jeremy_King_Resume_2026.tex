@@ -62,6 +62,12 @@
 
 % CUSTOM COMMANDS --------------
 
+% Command 'smallpipe'
+% A slightly shorter | character for a nicer look as a section header segment separator.
+\newcommand{\smallpipe}{\textbf{\raisebox{0.25ex}{\scalebox{1}[0.8]{\textbar}}}}
+
+% Command 'resumeItem'
+% A bullet point for use in multiple sections.
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -79,7 +85,9 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubheading}[4]{
+% Command 'resumeSubheading'
+% A section containing one primary header and one secondary header. The primary header has one bold left-aligned segment, a bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order. The secondary header has one italicized left-aligned segment and one italicized right-aligned segment, in that order.
+\newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -87,6 +95,8 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Command 'resumeSubSubheading'
+% A secondary header with one italicized left-aligned segment and one right-aligned segment.
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -94,7 +104,9 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+% Command 'resumeProjectHeading'
+% A section containing one primary header. The primary header has one bold left-aligned segment, a bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order.
+\newcommand{\resumeProjectHeading}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
