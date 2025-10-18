@@ -68,7 +68,9 @@
   }
 }
 
-\newcommand{\resumeEducationSubheading}[6]{
+% Command 'resumeDoubleSubheading'
+% A section containing one primary header and two secondary headers. The primary header has one bold left-aligned segment and one regular right-aligned segment, in that order. The secondary headers have one italicized left-aligned segment and one italicized right-aligned segment, in that order.
+\newcommand{\resumeDoubleSubheading}[6]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -127,7 +129,7 @@
 
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeEducationSubheading
+    \resumeDoubleSubheading
       {Worcester Polytechnic Institute}{Worcester, MA}
       {Bachelor of Science in Computer Science}{Expected May 2026}
       {Bachelor of Science in Interactive Media \&	 Game Development}{Expected May 2026}
