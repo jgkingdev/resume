@@ -65,14 +65,12 @@
 
 % Command 'smallpipe'
 % A slightly shorter | character for a nicer look as a section header segment separator.
-\newcommand{\smallpipe}{\textbf{\raisebox{0.25ex}{\scalebox{1}[0.8]{\textbar}}}}
+\newcommand{\smallpipe}{\textbf{\raisebox{0.2ex}{\scalebox{1}[0.8]{\textbar}}}}
 
 % Command 'resumeItem'
-% A bullet point for use in multiple sections.
+% A regular, left-aligned, indented bullet point for use in multiple sections.
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{{#1 \vspace{-2pt}}}
 }
 
 % Command 'resumeDoubleSubheading'
@@ -87,7 +85,7 @@
 }
 
 % Command 'resumeSubheading'
-% A section containing one primary header and one secondary header. The primary header has one bold left-aligned segment, a bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order. The secondary header has one italicized left-aligned segment and one italicized right-aligned segment, in that order.
+% A section containing one primary header and one secondary header. The primary header has one bold left-aligned segment, one bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order. The secondary header has one italicized left-aligned segment and one italicized right-aligned segment, in that order.
 \newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -106,7 +104,7 @@
 }
 
 % Command 'resumeProjectHeading'
-% A section containing one primary header. The primary header has one bold left-aligned segment, a bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order.
+% A section containing one primary header. The primary header has one bold left-aligned segment, one bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order.
 \newcommand{\resumeProjectHeading}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -114,7 +112,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+% Command 'resumeSubItem'
+% A 
+\newcommand{\resumeSubItem}[1]{
+  \resumeItem{#1}
+  \vspace{-4pt}
+}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -146,8 +149,8 @@
       {Worcester Polytechnic Institute}{Worcester, MA}
       {Bachelor of Science in Computer Science}{Expected May 2026}
       {Bachelor of Science in Interactive Media \&	 Game Development}{Expected May 2026}
-    \resumeSubSubheading
-      {GPA 3.86/4.0}{}
+%    \resumeSubSubheading
+%      {GPA 3.86/4.0}{}
   \resumeSubHeadingListEnd
 
 % EXPERIENCE -------------------
@@ -156,7 +159,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Junior Software Engineer}{Internship}{June 2024 -- August 2024}
+      {Junior Software Engineer}{Internship}{June 2024 -- Aug. 2024}
       {Walmart Advanced Systems \& Robotics}{Andover, MA}
       \resumeItemListStart
         \resumeItem{Developed a Docker application using Java to automatically import and export inventory snapshots from MariaDB containers in Kubernetes virtual environments on start up and shut down}
@@ -172,12 +175,33 @@
     \resumeSubHeadingListStart
     % Project Misfits project
       \resumeProjectHeading
-          {Project Misfits}{Godot, Git}{October 2025 -- Present}
+          {Project Misfits}{Godot, Git}{June 2025 -- Mar. 2026}
           \resumeItemListStart
-            \resumeItem{Game}
+            \resumeItem{TBD. Here to show you guys I intend to put this project on my resume, but it'll be commented out in the code I use to make this document until I have more to put here.}
           \resumeItemListEnd
     % Traverse game engine project
-    % Pinsect game and Dragonfly game engine project
+      \resumeProjectHeading
+          {Traverse Game Engine}{C, C++, CMake, Git, GitHub}{Oct. 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed fully functional 2D game engine in pure C++}
+            \resumeItem{Developed custom engine library from scratch to practice low-level programming knowledge and skills}
+          \resumeItemListEnd
+    % Dragonfly game engine project
+      \resumeProjectHeading
+          {Dragonfly Game Engine}{C++, Make, SFML, Git, GitHub}{Sept. 2025 -- Oct. 2025}
+          \resumeItemListStart
+            \resumeItem{Developed fully featured 2D game engine in C++}
+            \resumeItem{Conducted unit and integration testing with 100\% code coverage}
+            \resumeItem{Used SFML for rendering and audio playback}
+          \resumeItemListEnd
+    % Pinsect game project
+      \resumeProjectHeading
+          {Pinsect}{C, C++, Git, GitHub}{Oct. 2025}
+          \resumeItemListStart
+            \resumeItem{Designed and implemented a polished game using custom Dragonfly game engine}
+            \resumeItem{Collaborated on GitHub using conventional merge request and code review practices}
+            \resumeItem{Completed product featured on official Dragonfly website for creativity and quality}
+          \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 % SKILLS -----------------------
