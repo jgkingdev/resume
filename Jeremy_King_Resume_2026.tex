@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{graphicx}
 \input{glyphtounicode}
 
 % FONT OPTIONS -----------------
@@ -90,8 +91,8 @@
 \newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#1} \smallpipe{} \textit{\small#2} & #3 \\
+      \textit{\small#4} & \textit{\small #5} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -109,7 +110,7 @@
 \newcommand{\resumeProjectHeading}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+    \textbf{#1} \smallpipe{} \textit{\small#2} & #3 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -155,7 +156,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Junior Software Engineer -- Internship}{June 2024 -- August 2024}
+      {Junior Software Engineer}{Internship}{June 2024 -- August 2024}
       {Walmart Advanced Systems \& Robotics}{Andover, MA}
       \resumeItemListStart
         \resumeItem{Developed a Docker application using Java to automatically import and export inventory snapshots from MariaDB containers in Kubernetes virtual environments on start up and shut down}
@@ -171,7 +172,7 @@
     \resumeSubHeadingListStart
     % Project Misfits project
       \resumeProjectHeading
-          {\textbf{Project Misfits} $|$ \emph{Godot, Git}}{October 2025 -- Present}
+          {Project Misfits}{Godot, Git}{October 2025 -- Present}
           \resumeItemListStart
             \resumeItem{Game}
           \resumeItemListEnd
@@ -194,3 +195,6 @@
 % ------------------------------
 
 \end{document}
+
+% RESUME ENDS HERE -------------
+
