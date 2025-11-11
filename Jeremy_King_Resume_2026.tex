@@ -112,13 +112,6 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-% Command 'resumeSubItem'
-% A 
-\newcommand{\resumeSubItem}[1]{
-  \resumeItem{#1}
-  \vspace{-4pt}
-}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -136,11 +129,12 @@
 
 \begin{center}
     \textbf{\Huge \scshape Jeremy King} \\ \vspace{4pt}
-    \small 603-213-4559 $|$ \href{mailto:x@x.com}{jgking@wpi.edu} $|$ 
-    \href{https://linkedin.com/in/...}{linkedin.com/in/jgkingdev} \\
+    %\small 603-213-4559 $|$
+    \href{mailto:x@x.com}{jgking@wpi.edu} $|$ 
     \href{https://jgking.dev}{jgking.dev} $|$
     \href{https://github.com/...}{github.com/jgkingdev} $|$
     \href{https://codazen.itch.io}{codazen.itch.io}
+    %\href{https://linkedin.com/in/...}{linkedin.com/in/jgkingdev}
 \end{center}
 
 % EDUCATION --------------------
@@ -149,7 +143,7 @@
   \resumeSubHeadingListStart
     \resumeDoubleSubheading
       {Worcester Polytechnic Institute}{Worcester, MA}
-      {Bachelor of Science in Computer Science}{Expected May 2026}
+      {Bachelor of Science in Computer Science (CS)}{Expected May 2026}
       {Bachelor of Science in Interactive Media \&	 Game Development (IMGD)}{Expected May 2026}
 %    \resumeSubSubheading
 %      {GPA 3.86/4.0}{}
@@ -159,18 +153,9 @@
 
 \section{Experience}
   \resumeSubHeadingListStart
+
+    % Walmart Advanced Systems and Robotics position
     \resumeSubheading
-      {Peer Learning Assistant}{IMGD Program}{Oct. 2025 -- Dec. 2025}
-      {Worcester Polytechnic Institute}{Worcester, MA}
-      \resumeItemListStart
-        \resumeItem{Mentored students on version control practices and production pipelines in IMGD4900: Digital Game Design Studio}
-        \resumeItem{Mentored students on critical play, game studies, and  media analysis in IMGD1000: Critical Studies in Interactive Media and Game Development}
-        %\resumeItem{Supported students in core software development workflows, providing tailored and meaningful guidance on version control practices, sprint-based development, production pipeline structure, and designing complex game systems}
-        %\resumeItem{Mentored students on metacognitive learning strategies and media analysis, emphasizing critical and meaningful engagement with a variety of media formats and messages}
-      \resumeItemListEnd
-      % WPI PLA positions
-    \resumeSubheading
-      % Walmart Advanced Systems and Robotics position
       {Junior Software Engineer}{Internship}{June 2024 -- Aug. 2024}
       {Walmart Advanced Systems \& Robotics}{Andover, MA}
       \resumeItemListStart
@@ -179,28 +164,31 @@
         %\resumeItem{Used Jira for task management and Confluence for recording project documentation}
         %\resumeItem{Designed input and output process to support automatic snapshot file storage in Microsoft Azure}
       \resumeItemListEnd
+
+    % IMGD PLA positions
+    \resumeSubheading
+      {Peer Learning Assistant}{IMGD Program}{Oct. 2025 -- Dec. 2025}
+      {Worcester Polytechnic Institute}{Worcester, MA}
+      \resumeItemListStart
+        \resumeItem{Mentored students on version control practices and production pipelines in IMGD4900: Digital Game Design Studio}
+        \resumeItem{Mentored students on critical play, game studies, and  media analysis in IMGD1000: Critical Studies in Interactive Media and Game Development}
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
 % PROJECTS ---------------------
 
 \section{Projects}
     \resumeSubHeadingListStart
-      % Project Misfits project
-      \resumeProjectHeading
-        {Project Misfits}{Godot Engine, Git}{June 2025 -- Mar. 2026}
-        \resumeItemListStart
-          \resumeItem{Followed a full production pipeline to develop a fully featured vertical slice of a 2D action platformer}
-          \resumeItem{Project signified fulfillment of the WPI Major Qualifying Project requirement for both Computer Science and Interactive Media \& Game Development}
-        \resumeItemListEnd
 
       % Travelling with Taste project
       \resumeProjectHeading
         {Travelling with Taste}{Unreal Engine, C++, Blueprints, Git, Git LFS, GitHub, Jira}{Mar. 2025 -- May 2025}
         \resumeItemListStart
-          \resumeItem{Worked in a team of sevel to develop a 3D puzzle platformer where the player character is a suitcase}
-          \resumeItem{Focused on using game mechanics to support experience goal of having stealthy control of an unconventional object}
+          \resumeItem{Worked in a team of seven to develop a 3D puzzle platformer}
           \resumeItem{Showcased final product at PAX East 2025}
-          \resumeItem{Documented development cycle by posting progress materials and blogs to project website \href{https://ratgoosesuitstudios.github.io}{ratgoosesuitstudios.github.io}}
+          \resumeItem{Focused on designing an experience of controlling an unconventional player object stealthily}
+          \resumeItem{Documented development cycle by posting updates and blogs to project website \href{https://ratgoosesuitstudios.github.io}{ratgoosesuitstudios.github.io}}
         \resumeItemListEnd
 
       % Billionaires are Bad ISP
@@ -212,16 +200,28 @@
 %         \resumeItem{Used Unreal Engine Slate system to create custom in-editor UI elements to prompt user for further input during level construction}
         \resumeItemListEnd
 
-      % Dragonfly game engine project
+      % Project Misfits project
       \resumeProjectHeading
-        {Dragonfly Game Engine, Pinsect Game}{C++, Make, SFML, Git, GitHub}{Sept. 2025 -- Oct. 2025}
+        {Project Misfits}{Godot Engine, Git, GitHub}{June 2025 -- Mar. 2026}
+        \resumeItemListStart
+          \resumeItem{Followed a full production pipeline to develop a fully featured vertical slice of a 2D action platformer}
+          \resumeItem{Project signified fulfillment of the WPI Major Qualifying Project requirement for CS and IMGD graduates}
+        \resumeItemListEnd
+
+      % Dragonfly game engine project and Pinsect game project
+      \resumeProjectHeading
+        {Dragonfly Game Engine}{C++, Make, SFML, Git, GitHub}{Sept. 2025 -- Oct. 2025}
         \resumeItemListStart
           \resumeItem{Built a 2D game engine in C++ with rendering, input, audio, and physics modules}
           \resumeItem{Used custom unit test and integration test manager to achieve 100\% code coverage}
-          \resumeItem{Worked in a team of two to design and implement a 2D arcade game using custom game engine}
-          %\resumeItem{Developed fully featured 2D game engine in C++}
-          %\resumeItem{Conducted unit and integration testing with 100\% code coverage}
-          %\resumeItem{Used SFML for rendering and audio playback}
+        \resumeItemListEnd
+
+    % Pinsect game project
+      \resumeProjectHeading
+        {Pinsect}{C++, Make, SFML, Git, GitHub}{Sept. 2025 -- Oct. 2025}
+        \resumeItemListStart
+          \resumeItem{Worked in a team of two to design and implement a 2D arcade game using custom Dragonfly game engine}
+          \resumeItem{Completed product featured on official Dragonfly website for creativity and quality}
         \resumeItemListEnd
 
       % Traverse game engine project
@@ -246,17 +246,7 @@
         \resumeItemListStart
           \resumeItem{Developed a 3D sokoban puzzle game with fluid pipe mechanics}
           \resumeItem{Worked in a team of two over seven days and submitted final product to Jam-O-Lantern 2024}
-          %\resumeItem{Worked with a team of eight with distinct subteam groups communicating using separate leads and members}
         \resumeItemListEnd
-
-    % Pinsect game project
-      %\resumeProjectHeading
-        %{Pinsect}{C, C++, Git, GitHub}{Sept. 2025 -- Oct. 2025}
-        %\resumeItemListStart
-          %\resumeItem{Designed and implemented a 2D arcade-style game using custom Dragonfly game engine}
-          %\resumeItem{Collaborated on GitHub using GitHub-flow version control model}
-          %\resumeItem{Completed product featured on official Dragonfly website for high level of creativity, quality, and polish}
-        %\resumeItemListEnd
 
     % Custom 2D Platformer AStar Algorithm
 
@@ -287,7 +277,7 @@
       \textbf{Languages}{: C, C++, C\#, Java, Python, GDScript, JavaScript, HTML, CSS, SQL} \\
       \textbf{Engines and Frameworks}{: Unreal Engine, Godot Engine, Unity, SFML, SDL, Wwise, GameMaker Studio, Flask} \\
       % Put other skills relevant to the job listing here.
-      \textbf{Tools}{: Git, GitHub, Perforce, GitLab CI/CD, Docker, Kubernetes, Helm, MariaDB, Redis, Quarkus}
+      \textbf{Tools}{: Git, GitHub, Perforce, Docker, Kubernetes, Helm, MariaDB, Redis, GitLab CI/CD, Quarkus}
     }}
   \end{itemize}
 
