@@ -1,0 +1,157 @@
+%-------------------------
+% Cover Letter in LaTeX
+% Author : Jeremy King
+% Based off of: https://github.com/apurvmishra99/Deedy-Cover-Letter
+% License : MIT License
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+%\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+%\usepackage{titlesec}
+%\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{verbatim}
+%\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+%\usepackage{tabularx}
+\usepackage{graphicx}
+\input{glyphtounicode}
+
+% FONT OPTIONS -----------------
+
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+\usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% CUSTOM COMMANDS --------------
+
+% Company name command - lists the company's name left aligned.
+\newcommand{\companyname}[1]{
+\raggedright#1\\
+}
+
+% Company address command - lists the company's address left aligned with some space below.
+\newcommand{\companyaddress}[1]{
+\raggedright#1\\
+\mbox{}\\
+\mbox{}\\
+}
+
+% Current date command - lists the current date right aligned.
+\newcommand{\currentdate}[1]{
+\raggedleft#1\\
+}
+
+% Letter content command - lists the paragraph of letter content left aligned with a small bit of space below.
+\newcommand{\lettercontent}[1]{
+\raggedright#1\\
+\mbox{}\\
+}
+
+% Closing command - lists the closing remark right aligned.
+\newcommand{\closing}[1]{
+\raggedleft #1\\
+}
+
+% Signature command - lists the signature right aligned.
+\newcommand{\signature}[1]{
+\raggedleft #1\\
+}
+
+% COVER LETTER STARTS HERE -----
+
+\begin{document}
+
+% HEADER -----------------------
+
+\begin{center}
+    \textbf{\Huge \scshape Jeremy King} \\ \vspace{4pt}
+    %\small 603-213-4559 $|$
+    \href{mailto:x@x.com}{jgking@wpi.edu} $|$ 
+    \href{https://jgking.dev}{jgking.dev} $|$
+    \href{https://github.com/...}{github.com/jgkingdev} $|$
+    \href{https://codazen.itch.io}{codazen.itch.io}
+    %\href{https://linkedin.com/in/...}{linkedin.com/in/jgkingdev}
+\end{center}
+
+% INFORMATION HEADER -----------
+
+\hfill
+
+\begin{minipage}[t]{0.5\textwidth} 
+\companyname{Demiurge Studios}
+\companyaddress{Boston, MA}
+\end{minipage}
+\begin{minipage}[t]{0.49\textwidth} 
+\currentdate{\today}
+\end{minipage}
+
+\vspace{1.5cm}
+
+% LETTER BODY ------------------
+
+\lettercontent{Dear Hiring Manager,}
+
+% The opening paragraph of the cover letter should aim to introduce who you are and explain why you are interested in the role. Mention the job title, highlight your relevant strengths, and share why you are excited about the opportunity. If a current employee referred you, you may mention that here. Review the job posting to identify key qualifications, and use this paragraph to showcase how you meet those requirements, setting the stage for the rest of your letter. This introduction helps employers quickly see why you are a strong fit for the role.
+
+\lettercontent{
+I’m writing to apply for the Associate Software Engineer position at Demiurge Studios. My background in both Computer Science and Interactive Media \& Game Development has made me fluent in the technical language of software and the creative grammar of design. What excites me most about a role like this is the opportunity to influence projects that have a real impact and connection with users. Games are just as much an artistic medium as a piece of software, and programming games gives me real fulfillment when I have the opportunity to craft and shape the player experience.
+}
+   
+% After your introduction, focus on your qualifications and experience. This section should aim to immediately capture the employer’s interest by highlighting how you can contribute to their team. Expand on the skills and achievements listed in your resume, specifically focusing on how they align with the job requirements. Share examples of relevant projects or challenges you have worked on, emphasizing how you solved problems and delivered results. Highlight your contributions to the success of past initiatives and showcase the impact of your work to demonstrate your value to the employer.
+
+\lettercontent{
+In previous engineering work, I found my rhythm where precision met problem-solving: taking complex workflows, dissecting what slowed people down, and writing software that automated away the most gnarly barriers to development progress. That approach manifested in both software engineering and game programming applications, and I've gained a strong appreciation for empowering team collaboration by making cross-discipline documentation and tools. Whether constructing editor utilities in Unreal to let designers work more fluidly, or automating the process of data import and export between Kubernetes pods, I find using my technical abilities to support a team's overarching goals and game vision to be extremely rewarding.
+}
+
+% In the next paragraph, show that you have researched the company and understand its mission. Highlight how your goals align with theirs, focusing on what excites you about the company’s culture. A strong cover letter typically demonstrates how you will be an asset to the team, fit in well with colleagues, and share the company’s values, making you a more appealing candidate for an interview. Use this section to explain how your work can benefit both you and the employer, showcasing your ability to not only perform the job but also contribute positively to the team.
+
+\lettercontent{
+Demiurge stands out to me because it puts such a strong emphasis on creating meaningful experiences and collaborating with industry leaders to bring them to life. I also admire the addition of an original title to your current projects; it indicates to me that Demiurge is a team that truly believes in their ability to bring visions to life, and that's exactly the kind of team environment where I thrive. I’m confident my technical skills will make me ready to hit the ground running on day one, but more importantly, I think that my passion for turning ideas into technologically and experientially beautiful projects will fit right in with your team.
+}
+
+% In the final paragraph, summarize your interest in the position and suggest the next steps. Thank the hiring manager for reviewing your application, and express your enthusiasm for discussing the role further or scheduling an interview. Keep the focus on how your skills and experience can benefit the company, highlighting the value you can bring to their team.
+
+\lettercontent{
+Thank you for your time and consideration. I would be thrilled to bring my engineering expertise and creative drive to the team at Demiurge Studios.
+}
+
+\vspace{0.5cm}
+
+\closing{Kind regards,}
+\signature{\vspace{0.25cm} \includegraphics[width=4cm]{Assets/Signature}\\Jeremy King}
+
+\end{document}
+
+% COVER LETTER ENDS HERE -------
