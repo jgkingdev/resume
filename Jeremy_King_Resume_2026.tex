@@ -112,6 +112,15 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Command 'resumeProjectHeading'
+% A section containing one primary header. The primary header has one bold left-aligned segment, one bold separator (smallpipe), one italicized hyperlink segment, one bold separator, one italicized left-aligned segment, and one regular right-aligned segment, in that order.
+\newcommand{\resumeProjectHeadingLink}[4]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} \smallpipe{} \textit{\href{#2}{Link}} \smallpipe{} \textit{\small#3} & #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -182,21 +191,21 @@
     \resumeSubHeadingListStart
 
       % Travelling with Taste project
-      \resumeProjectHeading
-        {Travelling with Taste}{Unreal Engine, C++, Blueprints, Git, Git LFS, GitHub, Jira}{Mar. 2025 -- May 2025}
+      \resumeProjectHeadingLink
+        {Travelling with Taste}{https://codazen.itch.io/travelling-with-taste}{Unreal Engine, Blueprints, C++, Git, Git LFS, GitHub, Jira}{Mar. 2025 -- May 2025}
         \resumeItemListStart
           \resumeItem{Worked in a team of seven to develop a 3D puzzle platformer}
           \resumeItem{Showcased final product at PAX East 2025}
-          \resumeItem{Focused on designing an experience of controlling an unconventional player object stealthily}
-          \resumeItem{Documented development cycle by posting updates and blogs to project website \href{https://ratgoosesuitstudios.github.io}{ratgoosesuitstudios.github.io}}
+          \resumeItem{Focused on designing the experience of controlling an unconventional object stealthily}
+          \resumeItem{Documented development cycle with an update blog website called \textit{\href{https://ratgoosesuitstudios.github.io}{ratgoosesuitstudios.github.io}}}
         \resumeItemListEnd
 
       % Billionaires are Bad ISP
       \resumeProjectHeading
         {Billionaires are Bad}{Unreal Engine, C++, Perforce}{Oct. 2025 -- Dec. 2025}
         \resumeItemListStart
-          \resumeItem{Developed a custom Unreal Engine 5 plugin to automate level construction workflows in-engine}
-          \resumeItem{Created custom Editor Mode that halved the amount of time spent in-engine by artists and designers}
+          \resumeItem{Developed a custom Unreal Engine 5 plugin that scripted making changes to actor class types and meshes in C++}
+          \resumeItem{Sped up level construction and implementation process for non-programmers threefold}
 %         \resumeItem{Used Unreal Engine Slate system to create custom in-editor UI elements to prompt user for further input during level construction}
         \resumeItemListEnd
 
@@ -204,8 +213,8 @@
       \resumeProjectHeading
         {Project Misfits}{Godot Engine, Git, GitHub}{June 2025 -- Mar. 2026}
         \resumeItemListStart
-          \resumeItem{Followed a full production pipeline to develop a fully featured vertical slice of a 2D action platformer}
-          \resumeItem{Project signified fulfillment of the WPI Major Qualifying Project requirement for CS and IMGD graduates}
+          \resumeItem{Followed a full game development cycle to develop a fully featured vertical slice of a 2D action platformer}
+          \resumeItem{Owned the level design domain and was responsible for writing level design documentation and integrating with other design domains to ensure a smooth and effective transition from pre-production to production}
         \resumeItemListEnd
 
       % Dragonfly game engine project and Pinsect game project
@@ -217,10 +226,10 @@
         \resumeItemListEnd
 
     % Pinsect game project
-      \resumeProjectHeading
-        {Pinsect}{C++, Make, SFML, Git, GitHub}{Sept. 2025 -- Oct. 2025}
+      \resumeProjectHeadingLink
+        {Pinsect}{https://qksjeli.itch.io/pinsect}{C++, Make, SFML, Git, GitHub}{Sept. 2025 -- Oct. 2025}
         \resumeItemListStart
-          \resumeItem{Worked in a team of two to design and implement a 2D arcade game using custom Dragonfly game engine}
+          \resumeItem{Worked in a team of two to design and implement a 2D arcade game using self-developed Dragonfly game engine}
           \resumeItem{Completed product featured on official Dragonfly website for creativity and quality}
         \resumeItemListEnd
 
@@ -233,19 +242,19 @@
 %         \resumeItemListEnd
 
       % Scritters game jam project
-      \resumeProjectHeading
-        {Scritters}{Godot Engine, Aseprite, Git, GitHub}{Aug. 2025}
+      \resumeProjectHeadingLink
+        {Scritters}{https://codazen.itch.io/scritters}{Godot Engine, Aseprite, Git, GitHub}{Aug. 2025}
         \resumeItemListStart
-          \resumeItem{Developed a word puzzle game that subverts the scoring and optimization components of Scrabble}
-          \resumeItem{Worked in a team of two over nine days and submitted final product to Godot Wild Jam \#84}
+          \resumeItem{Developed a tile-based word game that uses player-built words for exploration}
+          \resumeItem{Worked in a team of two for Godot Wild Jam \#84}
         \resumeItemListEnd
 
       % S.C.A.R.E. game jam project
-      \resumeProjectHeading
-        {S.C.A.R.E.}{Godot Engine, Aseprite, Blender, Git, GitHub}{Oct. 2024}
+      \resumeProjectHeadingLink
+        {S.C.A.R.E.}{https://baguettery.itch.io/scare}{Godot Engine, Aseprite, Blender, Git, GitHub}{Oct. 2024}
         \resumeItemListStart
           \resumeItem{Developed a 3D sokoban puzzle game with fluid pipe mechanics}
-          \resumeItem{Worked in a team of two over seven days and submitted final product to Jam-O-Lantern 2024}
+          \resumeItem{Worked in a team of two for Jam-O-Lantern 2024}
         \resumeItemListEnd
 
     % Custom 2D Platformer AStar Algorithm
@@ -275,8 +284,7 @@
   \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
       \textbf{Languages}{: C, C++, C\#, Java, Python, GDScript, JavaScript, HTML, CSS, SQL} \\
-      \textbf{Engines and Frameworks}{: Unreal Engine, Godot Engine, Unity, SFML, SDL, Wwise, GameMaker Studio, Flask} \\
-      % Put other skills relevant to the job listing here.
+      \textbf{Engines and Frameworks}{: Unreal Engine, Godot Engine, Unity, SFML, SDL, Wwise, GameMaker Studio} \\
       \textbf{Tools}{: Git, GitHub, Perforce, Docker, Kubernetes, Helm, MariaDB, Redis, GitLab CI/CD, Quarkus}
     }}
   \end{itemize}
