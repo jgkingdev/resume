@@ -21,6 +21,7 @@
 \usepackage{graphicx}
 \input{glyphtounicode}
 
+
 % FONT OPTIONS -----------------
 
 % sans-serif
@@ -59,7 +60,6 @@
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-% ------------------------------
 
 % CUSTOM COMMANDS --------------
 
@@ -77,12 +77,13 @@
 % A section containing one primary header and two secondary headers.
 % The primary header has one bold left-aligned segment and one regular right-aligned segment, in that order.
 % The secondary headers have one italicized left-aligned segment and one italicized right-aligned segment, in that order.
-\newcommand{\resumeDoubleSubheading}[6]{
-	\vspace{-2pt}\item
+\newcommand{\resumeDoubleSubheading}[7]{
+	\vspace{-2pt}
+	\item
 		\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{\small#3} & \textit{\small #4} \\
-		\textit{\small#5} & \textit{\small #6} \\
+		\textbf{#1} \smallpipe{} \textit{\small{GPA #2}} & #3 \\
+		\textit{\small#4} & \textit{\small #5} \\
+		\textit{\small#6} & \textit{\small #7} \\
 		\end{tabular*}\vspace{-7pt}
 }
 
@@ -91,7 +92,8 @@
 % The primary header has one bold left-aligned segment, one bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order.
 % The secondary header has one italicized left-aligned segment and one italicized right-aligned segment, in that order.
 \newcommand{\resumeSubheading}[5]{
-	\vspace{-2pt}\item
+	\vspace{-2pt}
+	\item
 		\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
 		\textbf{#1} \smallpipe{} \textit{\small#2} & #3 \\
 		\textit{\small#4} & \textit{\small #5} \\
@@ -123,7 +125,7 @@
 \newcommand{\resumeProjectHeadingWebsite}[4]{
 	\item
 		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} \smallpipe{} \textit{\href{#2}{Website}} \smallpipe{} \textit{\small#3} & #4 \\
+		\textbf{#1} \smallpipe{} \textit{\href{#2}{Link}} \smallpipe{} \textit{\small#3} & #4 \\
 		\end{tabular*}\vspace{-7pt}
 }
 
@@ -159,10 +161,9 @@
 	\resumeSubHeadingListStart
 
 	\resumeDoubleSubheading
-	{Worcester Polytechnic Institute}{Worcester, MA}
+	{Worcester Polytechnic Institute}{3.89}{Worcester, MA}
 	{Bachelor of Science in Computer Science (CS)}{May 2026}
 	{Bachelor of Science in Interactive Media \&	 Game Development (IMGD)}{May 2026}
-% ADD GPA
 	\resumeSubHeadingListEnd
 
 
@@ -192,27 +193,6 @@
 	\resumeSubHeadingListEnd
 
 
-% EXPERIENCE CATALOGUE ---------
-
-%	% Walmart ASR
-%	\resumeSubheading
-%	{Junior Software Engineer}{Internship}{June 2024 -- Aug. 2024}
-%	{Walmart Advanced Systems \& Robotics}{Andover, MA}
-%	\resumeItemListStart
-%		\resumeItem{Developed a Java-based Docker application that automated inventory data workflows in Kubernetes, reducing manual test setup and teardown times for E2E testers from hours to minutes}
-%		\resumeItem{Developed database-agnostic storage logic to support ongoing migration from MariaDB to Redis}
-%	\resumeItemListEnd
-
-%	% IMGD PLA
-%	\resumeSubheading
-%	{Peer Learning Assistant}{IMGD Program}{Oct. 2025 -- Dec. 2025}
-%	{Worcester Polytechnic Institute}{Worcester, MA}
-%	\resumeItemListStart
-%		\resumeItem{Mentored students on version control practices and production pipelines in IMGD4900: Digital Game Design Studio}
-%		\resumeItem{Mentored students on critical play, game studies, and  media analysis in IMGD1000: Critical Studies in Interactive Media \& Game Development}
-%	\resumeItemListEnd
-
-
 % PROJECTS SECTION -------------
 
 \section{Projects}
@@ -225,7 +205,7 @@
 	{Godot, Git, GitHub, Eleventy, GitHub Pages}
 	{June 2025 -- Mar. 2026}
 	\resumeItemListStart
-		\resumeItem{Implemented core systems for a 2D platformer in a interdisciplinary team of five core project members and supplementary contractors}
+		\resumeItem{Implemented core systems for a 2D platformer in an interdisciplinary team of five core project members and supplementary contractors}
 		\resumeItem{Developed custom debug tools, cutscene scripting tools, dialogue management logic, and scene loading systems to support both platforming and narrative experiences}
 		\resumeItem{Acted as team git administrator, overseeing git workflow and managing GitHub organization}
 		\resumeItem{Compiled all process documentation on custom website built with Eleventy and GitHub Pages}
@@ -282,7 +262,7 @@
 	{Apr. 2026}
 	\resumeItemListStart
 		\resumeItem{Implemented core systems and gameplay logic for a thematically absurd, score-based 2D arcade game in a team of two programmers}
-		\resumeItem{Final product submitted to Cutthroat Game Jam 2026}
+%		\resumeItem{Final product submitted to Cutthroat Game Jam 2026}
 	\resumeItemListEnd
 
 	% Scritters
@@ -293,7 +273,7 @@
 	{Aug. 2025}
 	\resumeItemListStart
 		\resumeItem{Implemented core systems and gameplay logic for a 2D tile-based word game in a team of two programmers}
-		\resumeItem{Final product submitted to Godot Wild Jam \#84}
+%		\resumeItem{Final product submitted to Godot Wild Jam \#84}
 	\resumeItemListEnd
 
 	% S.C.A.R.E.
@@ -304,7 +284,7 @@
 	{Oct. 2024}
 	\resumeItemListStart
 		\resumeItem{Implemented gameplay logic and designed puzzles for a 3D sokoban-style game in a team of two programmers}
-		\resumeItem{Final product submitted to Jam-O-Lantern 2024}
+%		\resumeItem{Final product submitted to Jam-O-Lantern 2024}
 	\resumeItemListEnd
 
 	% Runicon Gate
@@ -323,135 +303,12 @@
 	{Python, Flask, SQL Alchemy, Bootstrap, Javascript, HTML, CSS}
 	{Mar. 2024 -- May 2024}
 	\resumeItemListStart
-		\resumeItem{Led the design and execution of puzzles for a 5-day alternate reality game}
+		\resumeItem{Led puzzle design and execution for a 5-day alternate reality game}
 		\resumeItem{Acted as puzzle subteam representative for coordination with subteams handling non-puzzle ARG elements}
-		\resumeItem{Developed a interactive website with progressively unlocked user logins based on real-time player actions}
+		\resumeItem{Developed an interactive website with progressively unlocked user logins based on real-time player actions}
 	\resumeItemListEnd
 
 	\resumeSubHeadingListEnd
-
-
-% PROJECTS CATALOGUE -----------
-
-%	% Project Misfits
-%	\resumeProjectHeadingWebsite
-%	{Leaves of Fate}
-%	{https://projectmisfits.github.io}
-%	{Godot, Git, GitHub, Eleventy, GitHub Pages}
-%	{June 2025 -- Mar. 2026}
-%	\resumeItemListStart
-%		\resumeItem{Developed a vertical slice of a 2D platformer with fluid movement mechanics and strong narrative presence}
-%		\resumeItem{Worked in a team of four core programmers, one core narrative artist, and ten game art and audio contractors}
-%		\resumeItem{Primary systems programmer}
-%		\resumeItem{Developed comprehensive player state machine encompassing platforming, flying, dialogue, and cutscene states}
-%		\resumeItem{Developed custom debug tools including a debug menu with teleport functionality}
-%		\resumeItem{Served as Git administrator, overseeing team git workflow and managing GitHub organization}
-%	\resumeItemListEnd
-
-%	% Billionaires are Bad
-%	\resumeProjectHeading
-%	{Billionaires are Bad}
-%	{Unreal Engine, C++, Perforce}
-%	{Oct. 2025 -- Dec. 2025}
-%	\resumeItemListStart
-%		\resumeItem{Developed a custom Unreal Engine 5 plugin that scripted making changes to actor class types and meshes in C++}
-%		\resumeItem{Sped up level construction and implementation process for non-programmers threefold}
-%		\resumeItem{Used Unreal Engine Slate system to create custom in-editor UI elements to prompt user for further input during level construction}
-%        \resumeItemListEnd
-
-%	% Travelling with Taste
-%	\resumeProjectHeadingWebsite
-%	{Travelling with Taste}
-%	{https://ratgoosesuitstudios.github.io}
-%	{Unreal Engine, Blueprints, C++, Git, Git LFS, GitHub, Jira, Jekyll, GitHub Pages}
-%	{Mar. 2025 -- May 2025}
-%	\resumeItemListStart
-%		\resumeItem{Developed a 3D platformer where a suitcase full of rats must evade airport security to get their cheese home}
-%		\resumeItem{Worked in a team of four programmers and three artists}
-%		\resumeItem{Showcased final product at PAX East 2025}
-%		\resumeItem{Focused on the experience goal of stealthily controlling an unconventional object}
-%		\resumeItem{Documented development cycle with weekly posts to an update blog developed with Jekyll and GitHub Pages}
-%	\resumeItemListEnd
-
-%	% Dragonfly Engine
-%	\resumeProjectHeading
-%	{Dragonfly Engine}
-%	{C++, Make, SFML, Git, GitHub}
-%	{Sept. 2025 -- Oct. 2025}
-%	\resumeItemListStart
-%		\resumeItem{Built a 2D game engine in C++ with rendering, input, audio, and physics modules}
-%		\resumeItem{Used custom unit test and integration test manager to achieve 100\% code coverage}
-%	\resumeItemListEnd
-
-%	% Pinsect
-%	\resumeProjectHeadingWebsite
-%	{Pinsect}
-%	{https://qksjeli.itch.io/pinsect}
-%	{C++, Make, SFML, Git, GitHub}
-%	{Sept. 2025 -- Oct. 2025}
-%	\resumeItemListStart
-%		\resumeItem{Developed a score-based 2D arcade game where an entomologist must pin insects for their collection}
-%		\resumeItem{Used custom-developed Dragonfly game engine}
-%		\resumeItem{Worked in a team of two developers}
-%	\resumeItemListEnd
-
-%	% D.E.P.T.H. C.H.A.R.G.E.
-%	\resumeProjectHeadingWebsite
-%	{D.E.P.T.H. C.H.A.R.G.E.}
-%	{https://codazen.itch.io/depth-charge}
-%	{Godot, Git, GitHub, Pinta}
-%	{Apr. 2026}
-%	\resumeItemListStart
-%		\resumeItem{Developed a thematically absurd, score-based 2D arcade game featuring 23 achievements}
-%		\resumeItem{Worked in a team of two developers}
-%		\resumeItem{Final product submitted to Cutthroat Game Jam 2026}
-%	\resumeItemListEnd
-
-%	% Scritters
-%	\resumeProjectHeadingWebsite
-%	{Scritters}
-%	{https://codazen.itch.io/scritters}
-%	{Godot, Aseprite, Git, GitHub}
-%	{Aug. 2025}
-%	\resumeItemListStart
-%		\resumeItem{Developed a 2D tile-based word game that uses player-built words for exploration}
-%		\resumeItem{Worked in a team of two developers}
-%		\resumeItem{Final product submitted to Godot Wild Jam \#84}
-%	\resumeItemListEnd
-
-%	% S.C.A.R.E.
-%	\resumeProjectHeadingWebsite
-%	{S.C.A.R.E.}
-%	{https://baguettery.itch.io/scare}
-%	{Godot Engine, Aseprite, Blender, Git, GitHub}
-%	{Oct. 2024}
-%	\resumeItemListStart
-%		\resumeItem{Developed a 3D sokoban puzzle game with fluid pipe mechanics}
-%		\resumeItem{Collaborated in a team of two developers}
-%		\resumeItem{Final product submitted to Jam-O-Lantern 2024}
-%	\resumeItemListEnd
-
-%	% Runicon Gate
-%	\resumeProjectHeadingWebsite
-%	{Runicon Gate}
-%	{https://codazen.itch.io/runicon-gate}
-%	{GameMaker Studio, Aseprite, Adobe Photoshop, Git, GitHub}
-%	{Sept. 2023 -- Oct. 2023}
-%	\resumeItemListStart
-%		\resumeItem{Designed and implemented a 2D bullet-hell RPG in GameMaker Studio}
-%		\resumeItem{Worked in a team of two programmers and two artists}
-%	\resumeItemListEnd
-
-%	% Hidden History Club ARG
-%	\resumeProjectHeading
-%	{Hidden History Club ARG}
-%	{Python, Flask, SQL Alchemy, Bootstrap, Javascript, HTML, CSS}
-%	{Mar. 2024 -- May 2024}
-%	\resumeItemListStart
-%		\resumeItem{Worked with a team of twenty-four students to design and execute an alternate reality game over five days}
-%		\resumeItem{Handled front-end and back-end development for interactive website with progressively unlocked user logins}
-%	\resumeItemListEnd
-
 
 % Missing:
 % CS1102
