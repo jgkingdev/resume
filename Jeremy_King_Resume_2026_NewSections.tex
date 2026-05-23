@@ -1,0 +1,525 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Jeremy King
+% Based off of: https://github.com/jakegut/resume
+% License : MIT License
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\input{glyphtounicode}
+
+
+% FONT OPTIONS -----------------
+
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+\usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+
+% CUSTOM COMMANDS --------------
+
+% Command 'smallpipe'
+% A slightly shorter | character for a nicer look as a section header segment separator.
+\newcommand{\smallpipe}{\textbf{\raisebox{0.2ex}{\scalebox{1}[0.8]{\textbar}}}}
+
+% Command 'resumeItem'
+% A regular, left-aligned, indented bullet point for use in multiple sections.
+\newcommand{\resumeItem}[1]{
+	\item\small{{#1 \vspace{-2pt}}}
+}
+
+% Command 'resumeDoubleSubheading'
+% A section containing one primary header and two secondary headers.
+% The primary header has one bold left-aligned segment and one regular right-aligned segment, in that order.
+% The secondary headers have one italicized left-aligned segment and one italicized right-aligned segment, in that order.
+\newcommand{\resumeDoubleSubheading}[7]{
+	\vspace{-2pt}
+	\item
+		\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \smallpipe{} \textit{\small{GPA #2}} & #3 \\
+		\textit{\small#4} & \textit{\small #5} \\
+		\textit{\small#6} & \textit{\small #7} \\
+		\end{tabular*}\vspace{-7pt}
+}
+
+% Command 'resumeSubheading'
+% A section containing one primary header and one secondary header.
+% The primary header has one bold left-aligned segment, one bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order.
+% The secondary header has one italicized left-aligned segment and one italicized right-aligned segment, in that order.
+\newcommand{\resumeSubheading}[5]{
+	\vspace{-2pt}
+	\item
+		\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \smallpipe{} \textit{\small#2} & #3 \\
+		\textit{\small#4} & \textit{\small #5} \\
+		\end{tabular*}\vspace{-7pt}
+}
+
+% Command 'resumeSubSubheading'
+% A secondary header with one italicized left-aligned segment and one right-aligned segment.
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+		\end{tabular*}\vspace{-7pt}
+}
+
+% Command 'resumeProjectHeading'
+% A section containing one primary header.
+% The primary header has one bold left-aligned segment, one bold separator (smallpipe), one italicized left-aligned segment, and one regular right-aligned segment, in that order.
+\newcommand{\resumeProjectHeading}[3]{
+	\item
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \smallpipe{} \textit{\small#2} & #3 \\
+		\end{tabular*}\vspace{-7pt}
+}
+
+% Command 'resumeProjectHeadingWebsite'
+% A section containing one primary header.
+% The primary header has one bold left-aligned segment, one bold separator (smallpipe), one italicized hyperlink segment, one bold separator, one italicized left-aligned segment, and one regular right-aligned segment, in that order.
+\newcommand{\resumeProjectHeadingWebsite}[4]{
+	\item
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} \smallpipe{} \textit{\href{#2}{Link}} \smallpipe{} \textit{\small#3} & #4 \\
+		\end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% ------------------------------
+
+% RESUME STARTS HERE -----------
+
+\begin{document}
+
+% HEADING ----------------------
+
+\begin{center}
+	\textbf{\Huge \scshape Jeremy King} \\ \vspace{4pt}
+%	\small 603-213-4559 $|$
+	\href{mailto:jeremykingdev@gmail.com}{jeremykingdev@gmail.com} $|$ 
+	\href{https://jgking.dev}{jgking.dev} $|$
+	\href{https://github.com/jgkingdev}{github.com/jgkingdev}
+%	\href{https://github.com/codazendev}{github.com/codazendev}
+%	\href{https://codazen.itch.io}{codazen.itch.io}
+%	\href{https://linkedin.com/in/...}{linkedin.com/in/jgkingdev}
+\end{center}
+
+% EDUCATION --------------------
+
+\section{Education}
+	\resumeSubHeadingListStart
+
+	\resumeDoubleSubheading
+	{Worcester Polytechnic Institute}{3.89}{Worcester, MA}
+	{Bachelor of Science in Computer Science (CS)}{May 2026}
+	{Bachelor of Science in Interactive Media \&	 Game Development (IMGD)}{May 2026}
+	\resumeSubHeadingListEnd
+
+
+% EXPERIENCE SECTION -----------
+
+\section{Experience}
+	\resumeSubHeadingListStart
+
+	% Walmart ASR
+	\resumeSubheading
+	{Junior Software Engineer}{Internship}{June 2024 -- Aug. 2024}
+	{Walmart Advanced Systems \& Robotics}{Andover, MA}
+	\resumeItemListStart
+		\resumeItem{Developed a Java-based Docker application that automated inventory data workflows in Kubernetes to streamline end-to-end test emulation setup and teardown}
+		\resumeItem{Engineered database-agnostic logic for data handling to support planned migration from MariaDB to Redis}
+		\resumeItem{Followed weekly sprint structure with daily stand-ups using Jira}
+	\resumeItemListEnd
+
+	% IMGD PLA
+	\resumeSubheading
+	{Peer Learning Assistant}{IMGD Program}{Oct. 2025 -- Dec. 2025}
+	{Worcester Polytechnic Institute}{Worcester, MA}
+	\resumeItemListStart
+		\resumeItem{Mentored students on game production pipelines and version control in senior-level game design studio course}
+%		\resumeItem{Mentored students on critical play, game studies, and  media analysis in IMGD1000: Critical Studies in Interactive Media \& Game Development}
+	\resumeItemListEnd
+
+	\resumeSubHeadingListEnd
+
+
+% PROJECTS SECTION -------------
+
+\section{Projects}
+	\resumeSubHeadingListStart
+
+	% Project Misfits
+	\resumeProjectHeadingWebsite
+	{Leaves of Fate}
+	{https://projectmisfits.github.io}
+	{Godot, Git, GitHub, Eleventy, GitHub Pages}
+	{June 2025 -- Mar. 2026}
+	\resumeItemListStart
+		\resumeItem{Implemented core systems for a 2D platformer in an interdisciplinary team of five core project members and supplementary contractors}
+		\resumeItem{Developed custom debug, cutscene scripting, dialogue management, and scene loading systems}
+		\resumeItem{Followed sprint structure with daily stand-ups, weekly playtesting, and weekly sprint planning meetings}
+		\resumeItem{Acted as team Git administrator, overseeing Git workflow and managing GitHub organization}
+		\resumeItem{Compiled all process documentation on custom website built with Eleventy and GitHub Pages}
+		\resumeItem{Showcased final product at PAX East 2026}
+	\resumeItemListEnd
+
+%	% Billionaires are Bad
+%	\resumeProjectHeading
+%	{Billionaires are Bad}
+%	{Unreal Engine, C++, Perforce}
+%	{Oct. 2025 -- Dec. 2025}
+%	\resumeItemListStart
+%		\resumeItem{Developed a custom Unreal Engine 5 plugin that scripted making changes to actor class types and meshes in C++}
+%        \resumeItemListEnd
+
+	% Travelling with Taste
+	\resumeProjectHeadingWebsite
+	{Travelling with Taste}
+	{https://ratgoosesuitstudios.github.io}
+	{Unreal Engine, Git, GitHub, Jira, Jekyll, GitHub Pages}
+	{Mar. 2025 -- May 2025}
+	\resumeItemListStart
+		\resumeItem{Implemented stealth mechanics and collectible systems for a 3D platformer in a 7-person interdisciplinary team}
+		\resumeItem{Documented development cycle with weekly posts to a custom blog built with Jekyll and GitHub Pages}
+		\resumeItem{Showcased final product at PAX East 2025}
+	\resumeItemListEnd
+
+%	% Dragonfly Engine
+%	\resumeProjectHeading
+%	{Dragonfly Engine}
+%	{C++, Make, SFML, Git, GitHub}
+%	{Sept. 2025 -- Oct. 2025}
+%	\resumeItemListStart
+%		\resumeItem{Built a 2D game engine in C++ with rendering, input, audio, and physics modules}
+%		\resumeItem{Used custom unit test and integration test manager to achieve 100\% code coverage}
+%	\resumeItemListEnd
+
+	% Pinsect
+	\resumeProjectHeadingWebsite
+	{Pinsect}
+	{https://qksjeli.itch.io/pinsect}
+	{C++, Make, SFML, Git, GitHub}
+	{Sept. 2025 -- Oct. 2025}
+	\resumeItemListStart
+		\resumeItem{Implemented core systems and gameplay logic for a score-based 2D arcade game in a team of two programmers}
+		\resumeItem{Built the game using a custom game engine written in C++ using SFML}
+	\resumeItemListEnd
+
+	% D.E.P.T.H. C.H.A.R.G.E.
+	\resumeProjectHeadingWebsite
+	{D.E.P.T.H. C.H.A.R.G.E.}
+	{https://codazen.itch.io/depth-charge}
+	{Godot, Git, GitHub}
+	{Apr. 2026}
+	\resumeItemListStart
+		\resumeItem{Implemented UI and gameplay logic for an absurd score-based 2D arcade game in a team of two programmers}
+%		\resumeItem{Final product submitted to Cutthroat Game Jam 2026}
+	\resumeItemListEnd
+
+	% Scritters
+	\resumeProjectHeadingWebsite
+	{Scritters}
+	{https://codazen.itch.io/scritters}
+	{Godot, Aseprite, Git, GitHub}
+	{Aug. 2025}
+	\resumeItemListStart
+		\resumeItem{Implemented core systems and gameplay logic for a 2D tile-based word game in a team of two programmers}
+%		\resumeItem{Final product submitted to Godot Wild Jam \#84}
+	\resumeItemListEnd
+
+	% S.C.A.R.E.
+	\resumeProjectHeadingWebsite
+	{S.C.A.R.E.}
+	{https://baguettery.itch.io/scare}
+	{Godot, Aseprite, Blender, Git, GitHub}
+	{Oct. 2024}
+	\resumeItemListStart
+		\resumeItem{Implemented gameplay logic and designed puzzles for a 3D sokoban-style game in a team of two programmers}
+%		\resumeItem{Final product submitted to Jam-O-Lantern 2024}
+	\resumeItemListEnd
+
+	% Runicon Gate
+	\resumeProjectHeadingWebsite
+	{Runicon Gate}
+	{https://codazen.itch.io/runicon-gate}
+	{GameMaker Studio, Aseprite, Adobe Photoshop, Git, GitHub}
+	{Sept. 2023 -- Oct. 2023}
+	\resumeItemListStart
+		\resumeItem{Implemented gameplay logic and scene transitions for a 2D bullet-hell RPG in a 4-person interdisciplinary team}
+	\resumeItemListEnd
+
+	% Hidden History Club ARG
+	\resumeProjectHeading
+	{Hidden History Club ARG}
+	{Python, Flask, SQL Alchemy, Bootstrap, Javascript, HTML, CSS}
+	{Mar. 2024 -- May 2024}
+	\resumeItemListStart
+		\resumeItem{Led puzzle design and execution for a 5-day alternate reality game}
+		\resumeItem{Acted as puzzle subteam representative for coordination with other subteams handling non-puzzle ARG elements}
+		\resumeItem{Developed an interactive website with user logins that were unlocked progressively based on real-world player actions}
+	\resumeItemListEnd
+
+	\resumeSubHeadingListEnd
+
+% Missing:
+% CS1102: Accelerated Introduction to Program Design
+%	Assignment 1:
+%	Assignment 2: Traffic
+%	Assignment 3: Warehouse of Widgets
+%	Assignment 4: Tic Tac Toe
+%	Assignment 5: BSTs
+%	Assignment 6:
+
+% CS2103: Accelerated Object-Oriented Design Principles
+%	Project 1: Band
+%	Project 2: Graph Search
+%	Project 3: Particle Simulator
+%	Project 4: Graphing Calculator
+
+% CS2303: Systems Programming Concepts
+
+
+% CS2223: Algorithms
+%	HW1
+%	HW2
+%	HW3
+%	HW4
+
+% CS3133
+
+
+% CS2011: Introduction to Machine Organization and Assembly Language
+%	Attacklab
+%	Bomblab
+%	Datalab
+
+% CS3013
+
+% CS3733: Software Engineering
+%	Student/Teacher Research Position App
+
+% IMGD2900: Digital Game Design I
+%	I Got Cancelled!
+
+% IMGD2030: Game Audio I
+%	Wwizard sound effects projects
+
+% IMGD4099: Cozy Games
+
+% CS3041
+
+% CS4120: Analysis of Algorithms
+
+% London IQP: Dr. Johnson's House
+
+% CS4342: Machine Learning
+%	HW1 - Linear Regression
+%	HW2 - Linear Classification
+%	HW3 - Neural Networks
+%	HW4 - Automatic Gradient System
+%	HW5 - Deep Neural Networks
+%	HW6 - Attention Mechanism in Deep Neural Networks
+
+% IMGD2000: Social Issues in Interactive Media and Games
+
+% IMGD4100: Artificial Intelligence for Interactive Media and Games
+%	Fall in New England Context Free Grammar
+%	The Monster Masher
+%	Project 1 - 2D AStar implementation
+%	Project 2 - Responsive Combat State Machine
+
+% IMGD2222: 2D Animation I
+
+% CS4732: Computer Animation
+%	Project 1
+%	Project 2
+%	Project 3
+%	Final Project - Museum Exhibit
+
+% CS4341: Introduction to Artificial Intelligence
+%	Project 1 - Solving Sokoban
+%	Project 2 - Playing Breakthrough
+%	Project 3 - Digit Recognition
+
+% FRC Experience
+
+
+% SKILLS SECTION ---------------
+
+\section{Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		\textbf{Languages}{: C, C++, GDScript, C\#, Java, Python, JavaScript, GLSL, HTML, CSS, LaTeX, SQL} \\
+		\textbf{Engines and Frameworks}{: Godot, Unreal Engine, OpenGL, GameMaker Studio, Unity, SFML, SDL, Wwise} \\
+		\textbf{Tools}{: Git, GitHub, Perforce, Docker, Kubernetes, Helm, MariaDB, Redis, GitLab CI/CD, Quarkus}
+	}}
+	\end{itemize}
+
+
+% SKILLS CATALOGUE -------------
+
+% Computer Science/Software Engineering
+% Proficient:
+%	version control, source control
+%	git workflow, github flow, git flow
+%	data structures
+%	algorithms
+%	operating systems, scheduling, locks, mutexes, race conditions
+%	low-level memory management
+%	inheritance, interfaces, classes
+%	extremely strong coding quality / consistency skills
+%	DevOps
+% Familiar:
+%	code review
+%	debug tooling
+% Exposed to:
+
+
+% Interactive Media & Game Development
+% Proficient:
+%	designing game mechanics
+%	extremely strong sense for game feel / juice
+%	playtesting
+%	scope management
+%	systems integration
+%	cross-discipline collaboration
+%	game development pipeline
+%	creative vision, experience goals, vision and pillars
+%	game physics
+%	behavior trees, decisions trees, state machines
+%	A* pathfinding
+%	flocking, boids, obstacle avoidance, particle simulation
+%	entity-component systems
+% Familiar:
+%	3D vector arithmetic and algorithms
+%	transform matrices
+%	quaternions
+%	computer graphics, computer animation
+%	vertex shader, fragment shader
+%	forward kinematics, inverse kinematics
+% Exposed to:
+%	internationalization (i18n)
+
+
+% Languages
+% Proficient:
+%	C
+%	C++
+%	GDScript
+%	Java
+%	Python
+%	JavaScript
+%	HTML
+%	CSS
+% Familiar:
+%	C#
+%	LaTeX
+%	GLSL
+%	SQL
+% Exposed to:
+
+% Engines and Frameworks
+% Proficient:
+%	Godot
+% Familiar:
+%	Unreal Engine
+%	GameMaker Studio
+%	Unity
+%	OpenGL
+%	SFML
+%	Wwise
+% Exposed to:
+%	Bevy
+%	SDL
+
+% Tools
+% Proficient:
+%	Git
+%	GitHub
+%	Perforce
+%	CMake
+% Familiar:
+%	Docker
+%	Kubernetes
+%	Helm
+%	MariaDB
+%	Tailscale
+%	MySQL
+%	SQL Alchemy
+% Exposed to:
+%	Redis
+%	GitLab CI/CD
+%	Quarkus
+%	Microsoft Azure
+%	Confluence
+%	JFrog Artifactory
+
+% Other
+% Proficient:
+%	Windows
+%	Linux
+%	Terminal commands
+%	VSCode
+%	Eclipse
+% Familiar:
+%	MacOS
+%	Package managers
+%	Visual Studio
+
+
+% ------------------------------
+
+\end{document}
+
+% RESUME ENDS HERE -------------
