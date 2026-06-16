@@ -125,7 +125,7 @@
 \newcommand{\resumeProjectHeadingWebsite}[4]{
 	\item
 		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} \smallpipe{} \textit{\href{#2}{Link}} \smallpipe{} \textit{\small#3} & #4 \\
+		\textbf{#1} \smallpipe{} \small{\href{#2}{Link}} \smallpipe{} \textit{\small#3} & #4 \\
 		\end{tabular*}\vspace{-7pt}
 }
 
@@ -149,10 +149,10 @@
 %	\small 603-213-4559 $|$
 	\href{mailto:jeremykingdev@gmail.com}{jeremykingdev@gmail.com} $|$ 
 	\href{https://jgking.dev}{jgking.dev} $|$
-	\href{https://github.com/jgkingdev}{github.com/jgkingdev}
+%	\href{https://linkedin.com/in/jgkingdev}{linkedin.com/in/jgkingdev}
+	\href{https://github.com/jgkingdev}{github.com/jgkingdev} $|$
 %	\href{https://github.com/codazendev}{github.com/codazendev}
-%	\href{https://codazen.itch.io}{codazen.itch.io}
-%	\href{https://linkedin.com/in/...}{linkedin.com/in/jgkingdev}
+	\href{https://codazen.itch.io}{codazen.itch.io}
 \end{center}
 
 % EDUCATION --------------------
@@ -188,7 +188,7 @@
 	{Peer Learning Assistant}{IMGD Program}{Oct. 2025 -- Dec. 2025}
 	{Worcester Polytechnic Institute}{Worcester, MA}
 	\resumeItemListStart
-		\resumeItem{Mentored students on game production pipelines and version control in senior-level game design courses}
+		\resumeItem{Mentored students on game production pipelines and version control throughout senior-level design studio course}
 %		\resumeItem{Mentored students on critical play, game studies, and  media analysis in IMGD1000: Critical Studies in Interactive Media \& Game Development}
 	\resumeItemListEnd
 
@@ -210,8 +210,9 @@
 		\resumeItem{Implemented core systems for a 2D platformer in a 5-person interdisciplinary team}
 %		\resumeItem{Worked with ten contractors to produce finalized art and audio assets for the game (because the core team was mostly programmers)}
 		\resumeItem{Developed custom debug, cutscene scripting, dialogue management, and scene loading systems}
-		\resumeItem{Followed sprint structure with daily stand-ups, weekly playtesting, and weekly sprint planning meetings}
+%		\resumeItem{Followed sprint structure with daily stand-ups, weekly playtesting, and weekly sprint planning meetings}
 		\resumeItem{Acted as team Git administrator, overseeing Git workflow and managing GitHub organization}
+		\resumeItem{Conducted weekly playtesting and QA sessions to quickly iterate on design decisions}
 		\resumeItem{Compiled all process documentation on custom website built with Eleventy and GitHub Pages}
 		\resumeItem{Showcased final product at PAX East 2026}
 	\resumeItemListEnd
@@ -229,45 +230,64 @@
 	\resumeProjectHeadingWebsite
 	{Travelling with Taste}
 	{https://ratgoosesuitstudios.github.io}
-	{Unreal Engine, Blueprints, C\#, Git, Jekyll, GitHub Pages}
+	{Unreal Engine, Blueprints, C++, Git, Jekyll, GitHub Pages}
 	{Mar. 2025 -- May 2025}
 	\resumeItemListStart
 		\resumeItem{Implemented stealth mechanics and collectible systems for a 3D platformer in a 7-person interdisciplinary team}
 		\resumeItem{Documented development cycle with weekly posts to a custom blog built with Jekyll and GitHub Pages}
-%		\resumeItem{Showcased final product at PAX East 2025}
+		\resumeItem{Showcased final product at PAX East 2025}
 	\resumeItemListEnd
 
-%	% Dragonfly Engine
-%	\resumeProjectHeading
-%	{Dragonfly Engine}
-%	{C++, Make, SFML, Git}
-%	{Sept. 2025 -- Oct. 2025}
-%	\resumeItemListStart
-%		\resumeItem{Built a 2D game engine in C++ with rendering, input, audio, and physics modules}
-%		\resumeItem{Used custom unit test and integration test manager to achieve 100\% code coverage}
-%	\resumeItemListEnd
+	% Dragonfly Engine
+	\resumeProjectHeading
+	{Dragonfly Engine}
+	{C++, Make, SFML, Git}
+	{Sept. 2025 -- Oct. 2025}
+	\resumeItemListStart
+		\resumeItem{Developed a 2D game engine in C++ and SFML with rendering, input, audio, and physics modules}
+%		\resumeItem{Developed custom unit test and integration test manager}
+	\resumeItemListEnd
 
 	% Pinsect
 	\resumeProjectHeadingWebsite
 	{Pinsect}
 	{https://qksjeli.itch.io/pinsect}
 	{C++, Make, SFML, Git}
-	{Sept. 2025 -- Oct. 2025}
+	{Oct. 2025}
 	\resumeItemListStart
-		\resumeItem{Implemented core systems and gameplay logic for a score-based 2D arcade game in a team of two programmers}
-		\resumeItem{Developed the game using a custom game engine written in C++ using SFML}
+		\resumeItem{Implemented core systems for a score-based 2D arcade game using custom Dragonfly Engine in a 2-person team}
+%		\resumeItem{Developed the game using custom Dragonfly Engine}
 	\resumeItemListEnd
 
-	% Hidden History Club ARG
+	% Computer Animation Museum Exhibit
 	\resumeProjectHeading
-	{Hidden History Club ARG}
-	{Python, Flask, SQLAlchemy, Bootstrap, HTML, CSS, Git}
-	{Mar. 2024 -- May 2024}
+	{OpenGL Museum Exhibit}
+	{JavaScript, OpenGL, Git}
+	{Apr. 2026}
 	\resumeItemListStart
-		\resumeItem{Led puzzle design and execution for a 5-day alternate reality game}
-		\resumeItem{Acted as puzzle subteam representative for coordination with other subteams handling non-puzzle ARG elements}
-		\resumeItem{Developed an interactive website with user logins that were unlocked progressively based on real-world player actions}
+		\resumeItem{Developed an interactive, first-person museum exhibit showcasing 3D animation techniques in a 3-person team}
 	\resumeItemListEnd
+
+%	% 2D A* Pathfinding Algorithm, Combat Behavior Tree
+%	\resumeProjectHeading
+%	{2D Platformer NPC Tech Demo}
+%	{Godot, GDScript, Git}
+%	{Sept. 2025 -- Oct. 2025}
+%	\resumeItemListStart
+%		\resumeItem{Developed an A* algorithm for NPC pathfinding in a 2D platformer context from scratch}
+%		\resumeItem{Developed a behavior tree for NPC combat behavior that responds to player actions}
+%	\resumeItemListEnd
+
+%	% Hidden History Club ARG
+%	\resumeProjectHeading
+%	{Hidden History Club ARG}
+%	{Python, Flask, SQLAlchemy, Bootstrap, HTML, CSS, Git}
+%	{Mar. 2024 -- May 2024}
+%	\resumeItemListStart
+%		\resumeItem{Led puzzle design and execution for a 5-day alternate reality game}
+%		\resumeItem{Acted as puzzle subteam representative for coordination with other subteams handling non-puzzle ARG elements}
+%		\resumeItem{Developed an interactive website with user logins that were unlocked progressively based on real-world player actions}
+%	\resumeItemListEnd
 
 	% D.E.P.T.H. C.H.A.R.G.E.
 	\resumeProjectHeadingWebsite
@@ -276,8 +296,8 @@
 	{Godot, GDScript, Git}
 	{Apr. 2026}
 	\resumeItemListStart
-		\resumeItem{Implemented UI and gameplay logic for an absurd score-based 2D arcade game in a team of two programmers}
-%		\resumeItem{Final product submitted to Cutthroat Game Jam 2026}
+		\resumeItem{Implemented UI and gameplay features for an absurd, score-based 2D arcade game in a 2-person team}
+		\resumeItem{Final product submitted to Cutthroat Game Jam 2026}
 	\resumeItemListEnd
 
 	% Scritters
@@ -287,8 +307,8 @@
 	{Godot, GDScript, Git, Aseprite}
 	{Aug. 2025}
 	\resumeItemListStart
-		\resumeItem{Implemented core systems and gameplay logic for a 2D tile-based word game in a team of two programmers}
-%		\resumeItem{Final product submitted to Godot Wild Jam \#84}
+		\resumeItem{Implemented gameplay features and core systems for a 2D tile-based word game in a 2-person team}
+		\resumeItem{Final product submitted to Godot Wild Jam \#84}
 	\resumeItemListEnd
 
 	% S.C.A.R.E.
@@ -298,8 +318,8 @@
 	{Godot, GDScript, Git, Aseprite, Blender}
 	{Oct. 2024}
 	\resumeItemListStart
-		\resumeItem{Implemented gameplay logic and designed puzzles for a 3D sokoban-style game in a team of two programmers}
-%		\resumeItem{Final product submitted to Jam-O-Lantern 2024}
+		\resumeItem{Implemented gameplay features and designed puzzles for a 3D sokoban-style game in a 2-person team}
+		\resumeItem{Final product submitted to Jam-O-Lantern 2024}
 	\resumeItemListEnd
 
 	% Runicon Gate
@@ -309,12 +329,23 @@
 	{GameMaker Studio, Git, Aseprite, Adobe Photoshop}
 	{Sept. 2023 -- Oct. 2023}
 	\resumeItemListStart
-		\resumeItem{Implemented gameplay logic and scene transitions for a 2D bullet-hell RPG in a 4-person interdisciplinary team}
+		\resumeItem{Implemented gameplay features and core systems for a 2D bullet-hell RPG in a 4-person interdisciplinary team}
 	\resumeItemListEnd
 
+%	% Fall in New England Context Free Grammar
+%	\resumeProjectHeading
+%	{Fall in New England Generator}
+%	{Tracery}
+%	{Sept. 2025}
+%	\resumeItemListStart
+%		\resumeItem{Designed and implemented a context free grammar to generate short stories about going for a hike in the fall}
+%	\resumeItemListEnd
 
 
 % Missing:
+
+% Chaldur mod
+
 % CS1102: Accelerated Introduction to Program Design
 %	Assignment 1:
 %	Assignment 2: Traffic
@@ -376,36 +407,7 @@
 % IMGD2000: Social Issues in Interactive Media and Games
 
 % IMGD4100: Artificial Intelligence for Interactive Media and Games
-%	Fall in New England Context Free Grammar
-
-	% Fall in New England Context Free Grammar
-	\resumeProjectHeading
-	{Fall in New England Generator}
-	{Tracery}
-	{Sept. 2025}
-	\resumeItemListStart
-		\resumeItem{Designed and implemented a context free grammar to generate short stories about going for a hike in the fall}
-	\resumeItemListEnd
-
 %	The Monster Masher
-
-	% 2D AStar Pathfinding Algorithm
-	\resumeProjectHeading
-	{2D Platformer A* Pathfinding Algorithm}
-	{Godot, GDScript, Git}
-	{Sept. 2025}
-	\resumeItemListStart
-		\resumeItem{Developed A* algorithm for AI agent pathfinding in a 2D platformer environment from scratch}
-	\resumeItemListEnd
-
-	% Combat Behavior Tree
-	\resumeProjectHeading
-	{2D Platformer Combat Behavior Tree}
-	{Godot, GDScript, Git}
-	{Oct. 2025}
-	\resumeItemListStart
-		\resumeItem{Developed custom behavior tree for AI agent combat actions in a 2D platformer environment}
-	\resumeItemListEnd
 
 % IMGD2222: 2D Animation I
 
@@ -413,7 +415,6 @@
 %	Project 1
 %	Project 2
 %	Project 3
-%	Final Project - Museum Exhibit
 
 % CS4341: Introduction to Artificial Intelligence
 %	Project 1 - Solving Sokoban
@@ -423,14 +424,15 @@
 % FRC Experience
 	\resumeSubHeadingListEnd
 
+
 % SKILLS SECTION ---------------
 
 \section{Skills}
 	\begin{itemize}[leftmargin=0.15in, label={}]
 	\small{\item{
-		\textbf{Languages}{: GDScript, C, C++, JavaScript, HTML, CSS, GLSL, Python, C\#, Java, SQL} \\
-		\textbf{Software}{: Godot, Unreal Engine, GameMaker Studio, Unity} \\
-		\textbf{Technologies}{: Git, OpenGL, Docker, Kubernetes, Helm, SFML, MariaDB, GitLab CI/CD}
+		\textbf{Languages}{: GDScript, C, C++, JavaScript, HTML, CSS, GLSL, Python, Java, SQL} \\
+		\textbf{Software}{: Godot, Unreal Engine, Unity, Aseprite, Audacity, Wwise, Blender} \\
+		\textbf{Technologies}{: Git, OpenGL, Docker, Kubernetes, Helm, MariaDB, GitLab CI/CD}
 	}}
 	\end{itemize}
 
@@ -453,6 +455,7 @@
 %	Makefile
 %	JSON
 %	yaml
+%	Lua
 
 % Software
 %	Godot
